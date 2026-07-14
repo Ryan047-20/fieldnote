@@ -50,7 +50,7 @@ export async function createDailyLog(
 
     const logDate = new Date(logDateValue);
 
-    if(!Number.isNaN(logDate.getTime())) {
+    if(Number.isNaN(logDate.getTime())) {
         throw new Error("please enter a valid time and date");
     }
 
@@ -82,7 +82,7 @@ export async function createDailyLog(
     if(
         hoursWorked !== null && (!Number.isFinite(hoursWorked) || 
         hoursWorked < 0 ||
-        hoursWorked < 24)
+        hoursWorked > 24)
     ) {
         throw new Error(
             "Hours between 0 and 24"
