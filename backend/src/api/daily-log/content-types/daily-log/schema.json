@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "daily_logs",
+  "info": {
+    "singularName": "daily-log",
+    "pluralName": "daily-logs",
+    "displayName": "Daily-Log"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 120,
+      "required": true
+    },
+    "workCompleted": {
+      "type": "text",
+      "required": true
+    },
+    "learning": {
+      "type": "text"
+    },
+    "challenges": {
+      "type": "text"
+    },
+    "solutions": {
+      "type": "text"
+    },
+    "nextSteps": {
+      "type": "text"
+    },
+    "hoursWorked": {
+      "type": "decimal",
+      "min": 0,
+      "max": 24
+    },
+    "entryState": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "draft",
+        "complete"
+      ]
+    }
+  }
+}
